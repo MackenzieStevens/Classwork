@@ -1,5 +1,5 @@
 package Software_Dev_Project;
-
+ 
 import java.util.ArrayList;
 
 public class HandB {
@@ -11,11 +11,9 @@ public class HandB {
         _hand = new ArrayList<CardB>();
     }
 
-    //generates a starting hand
-    public void startingHand(CardB card) {
-        for (int i=0;i<_handLength;i++) {
-            _hand.add(card);
-        }
+    //getter
+    public int getHandLength() {
+        return _handLength;
     }
 
     //adds cards to the hand
