@@ -1,19 +1,17 @@
 package Software_Dev_Project;
-
+ 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class DeckB {
     private ArrayList<CardB> _deck;
-    Random rand = new Random();     //creates a random number
     
 
 
     //constructor to create a new deck
     public DeckB() {
         _deck = new ArrayList<CardB>();
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 12; j++) {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 13; j++) {
                 _deck.add(new CardB(i, j));
             }
         }
@@ -38,10 +36,4 @@ public class DeckB {
         return _deck.size();
     }
 
-    //accessing a random card in the deck
-    public int randomCard() {
-        int num = _deck.size();   //sets a default deck size
-        int randNum = rand.nextInt(num);//generates a random number to access a spot in the deck
-        return randNum;
-    }
 }

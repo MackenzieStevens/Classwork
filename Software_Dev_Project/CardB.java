@@ -1,5 +1,5 @@
 package Software_Dev_Project;
-
+ 
 public class CardB
 {
     private int _suit, _value;
