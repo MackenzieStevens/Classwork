@@ -1,23 +1,16 @@
-import java.util.Random;
-
+//This is what stores the values of each card as an object
 public class Card{
     private String _value;
     private String _suit;
     String cardObj;
     
+    //Card Constructor
     public Card(String value, String suit){
         _value = value;
         _suit = suit;
     }
     
-    protected int setRandomSuit(){
-        Random r = new Random();
-        int lowSuit = 1;
-        int highSuit = 5;
-        int result = r.nextInt(highSuit - lowSuit) + lowSuit;
-        return result;
-    }
-
+    //Just for formatting purposes
     public void makeCard(){
         cardObj = _value + " of " + _suit;
     }
