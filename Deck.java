@@ -15,10 +15,11 @@ public class Deck{
                 valueCount = 0;
                 suitCount++;
             }
-            //sets values for cards ant sends them to the card class
+            //sets values for cards and sends them to the card 
             value = valueList[valueCount];
             suit = suitList[suitCount];
-            Card card = new Card(value, suit);
+            //Calls constructor to set values for card and creates card objects
+            Card card = new Card(value, suit); 
 
             card.makeCard();
             _deckList.add(card.cardObj);
