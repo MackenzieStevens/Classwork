@@ -7,6 +7,7 @@ public class GameB {
     private CardB playingCard = new CardB();    //creates a playing card
     private Random rand = new Random();         //creates a random number
     private int num = playDeck.getSize();       //sets a default deck size
+    
     public static void main(String[] args) {
         GameB game = new GameB();
         HandB playerHand = new HandB();     //creates a pleyers hand
@@ -21,6 +22,7 @@ public class GameB {
         System.out.println("player2 hand:");
         player2.showHand();
         game.playDeck.showDeck();
+        
     }
 
     //creates a starting hand
@@ -35,4 +37,5 @@ public class GameB {
         }
         return hand;
     }
+
 }
