@@ -1,10 +1,9 @@
+package checkCard;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class HandB {
     private int _handSize;
     private ArrayList<CardB> _hand;
-    private Random rand = new Random();         //creates a random number
 
     //constructor to initialize
     public HandB() {
@@ -43,8 +42,8 @@ public class HandB {
         for (int i = 0; i < _handSize; i++) 
         {
             CardB playingCard = new CardB();                       //creates a playing card
-            int randNum = rand.nextInt(deck.getSize());            //generates a random number to access a spot in the deck
-            playingCard = drawCard(deck, randNum);
+            //int randNum = rand.nextInt(deck.getSize());            //generates a random number to access a spot in the deck
+            playingCard = deck.drawCard();
             hand.addToHand(playingCard);
         }
         return hand;
@@ -58,13 +57,13 @@ public class HandB {
     }
 
     //draws a card from the deck at a random place
-    public CardB drawCard(DeckB deck, int i) {
+   /*  public CardB drawCard(DeckB deck, int i) {
         CardB drawnCard = new CardB();
         if (deck.getSize() > 0) {
             drawnCard = deck.getCard(i);
             deck.removeCard(i);
         }
         return drawnCard;
-    }
+    } */
     
 }

@@ -1,3 +1,4 @@
+package checkCard;
 public class CardB
 {
     private int _suit, _value;

@@ -1,4 +1,6 @@
+package checkCard;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class DeckB {
     private ArrayList<CardB> _deck;
@@ -33,6 +35,17 @@ public class DeckB {
 
     public void removeCard(int i) {
         _deck.remove(i);
+    }
+
+     public CardB drawCard() {
+         Random rand = new Random();
+         int i = rand.nextInt(_deck.size());
+         CardB drawnCard = new CardB();
+        if (_deck.size() > 0) {
+              drawnCard = _deck.get(i);
+            _deck.remove(i);
+          }
+        return drawnCard;
     }
 
 }
