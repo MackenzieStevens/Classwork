@@ -7,7 +7,11 @@ public class GameB {
     DeckB deck = new DeckB();
     HandB hand1 = new HandB();
     HandB hand2 = new HandB();
+<<<<<<< Updated upstream
     PlayerB player2 = new PlayerB(hand2.startingHand(deck));
+=======
+
+>>>>>>> Stashed changes
     PlayerB player1 = new PlayerB(hand1.startingHand(deck));
     player1.showPlayerHand();
     player1.checkForBooks();
@@ -15,6 +19,7 @@ public class GameB {
     Scanner input = new Scanner(System.in);
     do{
     System.out.println("Player 1's turn");
+<<<<<<< Updated upstream
     int guess = input.nextInt();
     match1(guess, hand1, hand2, deck);
     }while(hand1.getHandLength() != 0 || hand2.getHandLength() != 0);
@@ -29,6 +34,21 @@ public class GameB {
                 System.out.println("Match!");
                 hand1.addToHand(card);
                 hand2.removeFromHand(loop);
+=======
+    String guess = input.nextLine();
+    
+    }while(hand1.getHandLength() != 0 || hand2.getHandLength() != 0);
+    }
+    
+    public static void match1(HandB hand1, HandB hand2, DeckB deck){
+        
+        for(int i = 0; i<hand1.getHandLength(); i++){
+            Card card = hand1.getCard(i);
+            if(hand1.getHandB().equals(guess)){
+                System.out.println("Match!");
+                hand1.addToHand(card);
+                hand2.removeCard(i);
+>>>>>>> Stashed changes
 
             }
             else if(!hand2.getCard(loop).equals(guess)){
@@ -40,7 +60,10 @@ public class GameB {
                 System.out.println("Go fish.");
                
                 Random rand = new Random();
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
                 int num = playDeck.getSize();
                 int randNum = rand.nextInt(num);
                 playingCard = playDeck.getCard(randNum);
