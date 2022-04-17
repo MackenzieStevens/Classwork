@@ -16,7 +16,7 @@ public class HandB {
         card = _hand.get(i);
         return card;
     }
-/
+    
     //getters
     public int getHandLength() {
         return _hand.size();
